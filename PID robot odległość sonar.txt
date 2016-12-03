@@ -1,0 +1,121 @@
+
+
+//#include <cstdlib>
+#include <cstdio>
+//#include <ctime>
+
+
+float regulator2(float w_zad, float  wy_o)
+{
+ float k=1;
+ float k_i=0.00001;
+ float k_d=0;
+ // zmienne pomocnicze
+  float p,i,d,r;
+float u; // uchyb regulacji
+ static float u_p=0;  // uchyb regulacji w poprzenim wywo³aniu
+ static float su=0; // suma minionych uchybów regulacji
+
+u= w_zad - wy_o;   // aktualny uchyb regulacji 
+
+// wyznaczenie sk³¹dnika proporcjonalnego (P)
+p=k*u;
+
+// wyznaczenie sk³¹dnika ca³kuj¹cego(I)
+su=su+u;
+i=k_i *su;
+
+// wyznaczenie sk³¹dnika ró¿niczkuj¹cego (D)
+d= k_d*(u-u_p);
+u_p=u; // zapamiêtaj chwilow¹ wartoœæ b³êdów do przys³ych obliczeñ 
+
+r= p+i+d;  // sygna³ wyjœciowy regulatora ;
+
+if(r<-20)
+	r=-20;
+if(r>20)
+	r=20;
+
+return r;
+
+
+}
+
+void robot_setVel(int predkosc)
+{
+	
+	printf( "prdkosc robota: %d \n", predkosc);
+}
+
+
+
+
+
+int main()
+{
+
+// Kod sterowania robotem
+
+int wejscie=0;
+int wyjscie=0;
+int cel=241;
+
+ float ku=0.1,pi=2;
+ 
+ int wartosc_sonara=410;
+ int wartosc_sonara2=460;
+
+while(1)
+{
+int sonar[1];
+int liczba_sonarow=1;
+if(wartosc_sonara>240)
+{
+	//wartosc_sonara=wartosc_sonara-1;
+	wartosc_sonara=wartosc_sonara-wejscie;
+
+}
+
+if(wartosc_sonara<=240)
+{
+	scanf("%d",&wartosc_sonara) ;
+}
+//int wartosc_sonara;
+//const int liczba=scanf("%d",&liczba_sonarow);
+for(int i=0; i<1; i++)
+{
+//	printf("podaj wartosc sonara od 0 do 5000: ");
+//scanf("%d",&wartosc_sonara) ;
+sonar[i]=wartosc_sonara ;
+
+//printf( "liczba: %d sonar[%d]: %d   \n", liczba_sonarow,i, sonar[i]);
+}
+
+if(sonar[0]>2000)
+	  {
+		    
+			robot_setVel(600);  // ustawienie prêdkoœci 8000 mm/s 		
+			 printf("jazda prosto\n"); // wyœwietlenie komunikatu skrêt  
+	  }
+
+if(sonar[0]<2000)
+	  {
+	  
+ 
+   wyjscie=sonar[0];
+    wejscie=-regulator2(cel,wyjscie);
+    robot_setVel(wejscie);  
+
+      // uœpienie na 2 sekundy 
+	 printf( "wejscie: %d wyjscie: %d: cel: %d predkosc: %d \n\n\n", wejscie,wyjscie, cel,wejscie);	 
+	
+scanf("%d",&wartosc_sonara2) ;
+     //printf("predkosc robota   %f\n" ,  wejscie); // wyœwietlenie komunikatu stop    
+  // uœpienie na 2 sekundy 
+}
+}
+return 0;
+}
+
+
+
