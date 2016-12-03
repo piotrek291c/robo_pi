@@ -1,0 +1,101 @@
+fstream plik;
+plik.open( "E:\\MGR\\PRACA MAGISTERSKA\\fuzzy_logic_ok\\dobry_cel\\plik.txt", ios::in | ios::out );
+if( plik.good() == true )
+{
+    std::cout << "Uzyskano dostep do pliku!" << std::endl;
+    //tu operacje na pliku
+} else std::cout << "Dostep do pliku zostal zabroniony!" << std::endl;
+
+    if( plik.good() == true )
+    {
+		printf("otwarto ");  
+		//std::string napis="sdfsdfd";
+		// plik << "sdasdas" << endl;
+//getline( std::cin, napis );
+//plik.write( & napis[ 0 ], napis.length() ); //zapisuje dane poczynając od 0 indeksu
+        //tu operacje na pliku (zapis/odczyt)
+        
+    }
+
+
+		int z=0;
+		double psi=-4;
+		
+		
+
+
+
+    std::string status;
+    if (! engine->isReady(&status))
+		throw Exception("Engine not ready. The following errors were encountered:\n" + status, FL_AT);
+
+   // for (int i = 0; i <= 1030600; ++i){
+	for (int i = 0; i <= 321205; ++i){
+    /*    scalar light1 = inputVariable1->getMinimum() + i * (inputVariable1->range() / 50);
+        inputVariable1->setInputValue(light1);
+
+		scalar light2 = inputVariable2->getMinimum() + i * (inputVariable2->range() / 50);
+        inputVariable2->setInputValue(light2);
+
+		scalar light3 = inputVariable3->getMinimum() + i * (inputVariable3->range() / 50);
+        inputVariable3->setInputValue(light3);
+		*/
+
+
+//	scalar light1;
+//	scalar light2;
+//	scalar light3;
+
+
+		//printf("podaj left: ");     
+	    //scanf("%d", &left ); 
+		//printf("podaj front: ");
+		//scanf("%d", &front ); 
+		//printf("podaj right: ");
+		//scanf("%d", &right ); 
+		 
+
+//	light1=left;
+//	light2=right;
+//	light3=front;
+
+		
+
+
+
+
+	inputVariable1->setInputValue(z);
+	inputVariable2->setInputValue(psi);
+	
+	
+
+        engine->process();
+        //FL_LOGP( i << " " <<"left.in = " << Op::str(left) << " front.in = " << Op::str(front) << " right.in = "  << Op::str(right) << " -> " <<"Vleft.out = " << Op::str(outputVariable1->getOutputValue()) <<" Vright.out = " << Op::str(outputVariable2->getOutputValue()));   
+		plik << Op::str(z) << " " << Op::str(psi)  << " " <<  Op::str(outputVariable1->getOutputValue()) << " " << Op::str(outputVariable2->getOutputValue()) << endl;
+
+		 //FL_LOG("Ambient.input = " );   
+		 
+
+		psi=psi+0.01;
+		if(psi>4.0)
+		{
+			
+			z=z+1;
+			if(z>400)
+			{
+				
+				z=0;
+			}
+
+			psi=-4.0;
+		}
+
+    }
+
+
+
+
+
+
+	plik.close();
+	printf("zamknieto "); 
