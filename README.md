@@ -32,7 +32,7 @@ http://www.jarzebski.pl/arduino/czujniki-i-sensory/3-osiowy-magnetometr-hmc5883l
 https://projects.drogon.net/raspberry-pi/wiringpi/i2c-library/
 
 
-
+https://github.com/sanzaru/hmc5883l
 
 
 
