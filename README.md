@@ -24,7 +24,7 @@ http://forum.r-pi.pl/python/regulator-pid-t150544.html
 https://github.com/DexterInd?tab=repositories
 
 
-
+http://mikrokontrolery.blogspot.com/2011/03/Robotyka-Teoria-Predkosc-obrotowa-oraz-kierunek-obrotu-kol.html
 
 
 
