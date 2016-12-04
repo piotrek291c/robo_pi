@@ -21,7 +21,7 @@ http://www.forbot.pl/forum/topics20/teoria-sterowanie-silnikiem-robotem-pid-vt20
 
 http://forum.r-pi.pl/python/regulator-pid-t150544.html
 
-
+https://github.com/DexterInd?tab=repositories
 
 
 
