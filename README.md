@@ -29,7 +29,7 @@ http://mikrokontrolery.blogspot.com/2011/03/Robotyka-Teoria-Predkosc-obrotowa-or
 
 http://www.jarzebski.pl/arduino/czujniki-i-sensory/3-osiowy-magnetometr-hmc5883l.html
 
-
+https://projects.drogon.net/raspberry-pi/wiringpi/i2c-library/
 
 
 
