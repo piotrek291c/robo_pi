@@ -39,7 +39,7 @@ https://github.com/mwilliams03/BerryIMU
 
 https://github.com/STMemsLinuxDrivers/lsm6ds3-input/blob/master/drivers/input/misc/lsm6ds3/lsm6ds3_i2c.c
 
-
+https://github.com/sparkfun/SparkFun_LSM6DS3_Arduino_Library
 
 
 
