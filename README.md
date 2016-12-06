@@ -66,11 +66,13 @@ https://github.com/sparkfun/SparkFun_LSM6DS3_Arduino_Library
 https://github.com/me-no-dev/RasPiArduino
 
 
+http://www.instructables.com/id/Building-a-segway-in-Raspberry-Pi/?ALLSTEPS
 
+https://www.sunfounder.com/learn/sensor-kit-v2-0-for-raspberry-pi-b-plus/lesson-32-mpu6050-gyro-acceleration-sensor-sensor-kit-v2-0-for-b-plus.html
 
+https://github.com/jrowberg/i2cdevlib/tree/master/RaspberryPi_bcm2835
 
+https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050
 
-
-
-
+https://github.com/mwilliams03/Raspberry-Gyro-Acc
 
