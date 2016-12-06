@@ -61,7 +61,7 @@ https://github.com/FJFranklin/i2cdevlib
 https://github.com/mwbritton/Raspberry-Pi-4x4-in-Schools-Project/blob/master/LSM6DS3.py
 
 
-
+https://github.com/sparkfun/SparkFun_LSM6DS3_Arduino_Library
 
 
 
