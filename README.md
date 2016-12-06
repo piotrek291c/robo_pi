@@ -58,7 +58,7 @@ https://github.com/sparkfun/LSM6DS3_Breakout/blob/master/Libraries/Arduino/examp
 https://github.com/jrowberg/i2cdevlib
 https://github.com/FJFranklin/i2cdevlib
 
-
+https://github.com/mwbritton/Raspberry-Pi-4x4-in-Schools-Project/blob/master/LSM6DS3.py
 
 
 
