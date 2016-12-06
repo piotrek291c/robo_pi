@@ -55,8 +55,8 @@ https://github.com/jrowberg/i2cdevlib/tree/master/RaspberryPi_bcm2835
 https://github.com/sparkfun/LSM6DS3_Breakout/blob/master/Libraries/Arduino/examples/MinimalistExample/MinimalistExample.ino
 
 
-
-
+https://github.com/jrowberg/i2cdevlib
+https://github.com/FJFranklin/i2cdevlib
 
 
 
