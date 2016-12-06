@@ -50,9 +50,9 @@ http://raspberrypiprogramming.blogspot.com/2014/08/how-to-install-and-setup-qt-c
 
 http://raspberrypiprogramming.blogspot.com/2014/08/how-to-install-and-setup-qt-creator-on.html
 
-
-
-
+https://blogs.ncl.ac.uk/francisfranklin/2014/04/16/using-i2c-with-the-raspberry-pi-step-2-sparkfun-9dof-sensor-stick/
+https://github.com/jrowberg/i2cdevlib/tree/master/RaspberryPi_bcm2835
+https://github.com/sparkfun/LSM6DS3_Breakout/blob/master/Libraries/Arduino/examples/MinimalistExample/MinimalistExample.ino
 
 
 
