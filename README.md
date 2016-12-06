@@ -76,3 +76,5 @@ https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050
 
 https://github.com/mwilliams03/Raspberry-Gyro-Acc
 
+
+http://www.jarzebski.pl/arduino/czujniki-i-sensory/czujnik-wilgotnosci-i-temperatury-dht11-dht22.html
