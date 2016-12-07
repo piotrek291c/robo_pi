@@ -93,10 +93,10 @@ https://blog.miguelgrinberg.com/post/stream-video-from-the-raspberry-pi-camera-t
 https://blog.miguelgrinberg.com/post/how-to-build-and-run-mjpg-streamer-on-the-raspberry-pi
 
 
+http://www.pyimagesearch.com/2015/03/30/accessing-the-raspberry-pi-camera-with-opencv-and-python/
 
-
-
-
+https://github.com/ccrisan/motionpie/wiki/Fast-Network-Camera
+https://blog.ligos.net/2016-04-17/RaspberryPi-As-A-Simple-MJPEG-Camera.html
 
 
 
