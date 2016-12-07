@@ -1,0 +1,218 @@
+mpc clear 
+mpc status
+mpc add http://31.192.216.7:8000/rmf_maxxx   dobry
+mpc add http://31.192.216.10:8000
+mpc volume 
+mpc pause
+amixer cset numid=1 -- 100%
+
+
+http://forbot.pl/blog/artykuly/programowanie/raspberry-pi-w-robotyce-amatorskiej-2-konfiguracja-id1266
+forum.atnel.pl/topic3828.html
+https://www.element14.com/community/community/raspberry-pi/raspberrypi_projects/blog/2014/01/18/internet-radio-with-raspberry-pi-piface-cad-and-mpdmpc
+http://ozzmaker.com/interface-16x2-lcd-with-the-raspberry-pi/
+chown -v pi interfaces
+sudo nano  /etc/network/interfaces
+cat /etc/mpd.conf
+sudo nano  /etc/asound.conf
+
+
+pcm.mmap0 {
+        type mmap_emul;
+        slave {
+                pcm "hw:0,0";
+        }
+}
+pcm.!default {
+        type plug;
+        slave {
+                pcm mmap0;
+        }
+}
+
+
+
+
+
+
+sudo nano  /etc/mpd.conf
+inet addr:192.168.2.72  // aktualny adres ip maliny 
+Bcast:192.168.2.255    // adres broadcast 
+Mask:255.255.255.0    // maska sieci
+Gateway 192.168.2.1   // brama sieci 
+Destination 192.168.2.0 // adres odbiorcy routera 
+
+
+iface default inet static 
+address 192.168.2.72 
+netmask 255.255.255.0 
+network 192.168.2.0 
+broadcast 192.168.2.255 
+gateway 192.168.2.1
+
+
+
+
+
+mkdir HelloWorld 
+cd HelloWorld 
+nano hello.c
+gcc hello.c -o hello
+./hello
+
+
+
+piny 7 w c++ w wiring pi to na płytce pin #4 
+gpio readall
+
+gpio mode 9 out 
+gpio -g write 9 0 
+odcztujemy wartość 9 z kolumny wPI  a rzeczywisty pin ma wartość 5 a nazwa SCL
++-----+-----+---------+------+---+---Pi 3---+---+------+---------+-----+-----+
+ | BCM | wPi |   Name  | Mode | V | Physical | V | Mode | Name    | wPi | BCM |
+ +-----+-----+---------+------+---+----++----+---+------+---------+-----+-----+
+ |     |     |    3.3v |      |   |  1 || 2  |   |      | 5v      |     |     |
+ |   2 |   8 |   SDA.1 |  OUT | 0 |  3 || 4  |   |      | 5V      |     |     |
+ |   3 |   9 |   SCL.1 |  OUT | 0 |  5 || 6  |   |      | 0v      |     |     |
+ |   4 |   7 | GPIO. 7 |  OUT | 0 |  7 || 8  | 1 | OUT  | TxD     | 15  | 14  |
+ |     |     |      0v |      |   |  9 || 10 | 1 | IN   | RxD     | 16  | 15  |
+ |  17 |   0 | GPIO. 0 |   IN | 0 | 11 || 12 | 0 | IN   | GPIO. 1 | 1   | 18  |
+ |  27 |   2 | GPIO. 2 |   IN | 0 | 13 || 14 |   |      | 0v      |     |     |
+ |  22 |   3 | GPIO. 3 |   IN | 0 | 15 || 16 | 0 | OUT  | GPIO. 4 | 4   | 23  |
+ |     |     |    3.3v |      |   | 17 || 18 | 0 | OUT  | GPIO. 5 | 5   | 24  |
+ |  10 |  12 |    MOSI |  OUT | 1 | 19 || 20 |   |      | 0v      |     |     |
+ |   9 |  13 |    MISO | ALT0 | 0 | 21 || 22 | 0 | OUT  | GPIO. 6 | 6   | 25  |
+ |  11 |  14 |    SCLK |   IN | 1 | 23 || 24 | 1 | OUT  | CE0     | 10  | 8   |
+ |     |     |      0v |      |   | 25 || 26 | 0 | OUT  | CE1     | 11  | 7   |
+ |   0 |  30 |   SDA.0 |   IN | 1 | 27 || 28 | 1 | IN   | SCL.0   | 31  | 1   |
+ |   5 |  21 | GPIO.21 |   IN | 1 | 29 || 30 |   |      | 0v      |     |     |
+ |   6 |  22 | GPIO.22 |   IN | 1 | 31 || 32 | 0 | IN   | GPIO.26 | 26  | 12  |
+ |  13 |  23 | GPIO.23 |   IN | 0 | 33 || 34 |   |      | 0v      |     |     |
+ |  19 |  24 | GPIO.24 |   IN | 0 | 35 || 36 | 0 | IN   | GPIO.27 | 27  | 16  |
+ |  26 |  25 | GPIO.25 |   IN | 0 | 37 || 38 | 0 | IN   | GPIO.28 | 28  | 20  |
+ |     |     |      0v |      |   | 39 || 40 | 0 | IN   | GPIO.29 | 29  | 21  |
+ +-----+-----+---------+------+---+----++----+---+------+---------+-----+-----+
+ | BCM | wPi |   Name  | Mode | V | Physical | V | Mode | Name    | wPi | BCM |
+ +-----+-----+---------+------+---+---Pi 3---+---+------+---------+-----+-----+
+
+
+
+
+
+
+
+
+
+
+
+sudo nano /etc/network/interfaces
+
+////////////////////////////////////////////////////////////
+
+auto lo
+iface lo inet loopback
+
+
+#iface eth0 inet manual
+auto eth0
+ iface eth0 inet static
+
+ address 192.168.137.240
+ netmask 255.255.255.0
+ gateway 192.168.137.1
+
+# address 192.168.2.72
+# netmask 255.255.255.0
+# network 192.168.2.0
+# broadcast 192.168.2.255
+# gateway 192.168.2.1
+
+
+allow-hotplug wlan0
+  iface wlan0 inet manual
+ #  iface wlan0 inet static
+
+# address 192.168.2.72
+# netmask 255.255.255.0
+# network 192.168.2.0
+# broadcast 192.168.2.255
+#gateway 192.168.2.1
+
+
+# wpa-ssid Piotrek
+# wpa-psk tplink321
+
+  wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+iface default inet dhcp
+
+
+
+
+
+
+
+allow-hotplug wlan1
+  iface wlan1 inet manual
+#   iface wlan1 inet static
+    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+netstat -nr
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+0.0.0.0         192.168.137.1   0.0.0.0         UG        0 0          0 eth0
+192.168.137.0   0.0.0.0         255.255.255.0   U         0 0          0 eth0
+
+
+/////////////////////////////////////////////////////////////
+
+sudo route add default gw 192.168.137.1
+
+
+
+/////////////////////////////////////////////////////////////////////
+
+
+sudo nano /etc/dhcpcd.conf
+
+
+nohook lookup-hostname
+
+
+interface eth0
+ static ip_address=192.168.137.240
+
+interface wlan0
+static ip_address=192.168.137.240
+static routers=192.168.137.1
+static domain_name_servers=192.168.137.1 192.168.2.1
+
+
+/////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
