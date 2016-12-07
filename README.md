@@ -86,7 +86,7 @@ http://shaunsbennett.com/piblog/?p=266
 
 https://github.com/halherta/RaspberryPi-mcp3008Spi
 
-
+https://pimylifeup.com/raspberry-pi-webcam-server/
 
 
 
