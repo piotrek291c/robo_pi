@@ -131,3 +131,6 @@ https://github.com/dbblackdiamond/SparkFun-LSM6DS3-Photon
 
 
 http://avrkwiat.nstrefa.pl/omnie/index.php?option=com_content&view=article&id=171&Itemid=195
+
+
+https://github.com/sparkfun/SparkFun_LSM6DS3_Arduino_Library
