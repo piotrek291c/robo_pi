@@ -127,3 +127,7 @@ http://www.ostafichuk.com/raspberry-pi-projects/raspimower/fast-web-video-stream
 
 
 https://github.com/dbblackdiamond/SparkFun-LSM6DS3-Photon
+
+
+
+http://avrkwiat.nstrefa.pl/omnie/index.php?option=com_content&view=article&id=171&Itemid=195
