@@ -78,3 +78,5 @@ https://github.com/mwilliams03/Raspberry-Gyro-Acc
 
 
 http://www.jarzebski.pl/arduino/czujniki-i-sensory/czujnik-wilgotnosci-i-temperatury-dht11-dht22.html
+
+http://www.raspberrypi-spy.co.uk/2013/10/analogue-sensors-on-the-raspberry-pi-using-an-mcp3008/
