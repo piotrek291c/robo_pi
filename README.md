@@ -90,7 +90,7 @@ https://pimylifeup.com/raspberry-pi-webcam-server/
 
 https://blog.miguelgrinberg.com/post/stream-video-from-the-raspberry-pi-camera-to-web-browsers-even-on-ios-and-android
 
-
+https://blog.miguelgrinberg.com/post/how-to-build-and-run-mjpg-streamer-on-the-raspberry-pi
 
 
 
