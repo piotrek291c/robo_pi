@@ -84,6 +84,24 @@ http://www.raspberrypi-spy.co.uk/2013/10/analogue-sensors-on-the-raspberry-pi-us
 
 http://shaunsbennett.com/piblog/?p=266
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 https://github.com/halherta/RaspberryPi-mcp3008Spi
 
 https://pimylifeup.com/raspberry-pi-webcam-server/
@@ -105,6 +123,6 @@ https://programmaticponderings.com/2013/01/01/remote-motion-activated-web-based-
 http://pingbin.com/2012/12/raspberry-pi-web-cam-server-motion/
 
 
-
+http://www.ostafichuk.com/raspberry-pi-projects/raspimower/fast-web-video-streaming-for-the-raspberry-pi/
 
 
