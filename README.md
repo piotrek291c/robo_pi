@@ -88,6 +88,7 @@ https://github.com/halherta/RaspberryPi-mcp3008Spi
 
 https://pimylifeup.com/raspberry-pi-webcam-server/
 
+https://blog.miguelgrinberg.com/post/stream-video-from-the-raspberry-pi-camera-to-web-browsers-even-on-ios-and-android
 
 
 
