@@ -126,3 +126,4 @@ http://pingbin.com/2012/12/raspberry-pi-web-cam-server-motion/
 http://www.ostafichuk.com/raspberry-pi-projects/raspimower/fast-web-video-streaming-for-the-raspberry-pi/
 
 
+https://github.com/dbblackdiamond/SparkFun-LSM6DS3-Photon
