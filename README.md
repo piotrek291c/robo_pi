@@ -99,10 +99,10 @@ https://github.com/ccrisan/motionpie/wiki/Fast-Network-Camera
 https://blog.ligos.net/2016-04-17/RaspberryPi-As-A-Simple-MJPEG-Camera.html
 
 
-
-
-
-
+http://www.howtoembed.com/projects/raspberry-pi/95-motioneye-with-raspberry-pi
+https://github.com/ccrisan/motioneye/wiki/Install-On-Raspbian
+https://programmaticponderings.com/2013/01/01/remote-motion-activated-web-based-video-surveillance-with-raspberry-pi/
+http://pingbin.com/2012/12/raspberry-pi-web-cam-server-motion/
 
 
 
