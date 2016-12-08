@@ -136,3 +136,4 @@ http://avrkwiat.nstrefa.pl/omnie/index.php?option=com_content&view=article&id=17
 https://github.com/sparkfun/SparkFun_LSM6DS3_Arduino_Library
 http://robotics.stackexchange.com/questions/8680/calculating-position-based-on-accelerometer-data
 
+http://www.starlino.com/imu_guide.html
