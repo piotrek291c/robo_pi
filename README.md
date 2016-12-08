@@ -139,3 +139,15 @@ http://robotics.stackexchange.com/questions/8680/calculating-position-based-on-a
 http://www.starlino.com/imu_guide.html
 http://perso-etis.ensea.fr/~pierandr/cours/M1_SIC/AN3397.pdf
 http://aeroquad.com/showthread.php?7786-Simple-paper-about-an-algorithm-for-positioning-using-accelerometers
+
+
+
+
+https://github.com/sparkfun/SparkFun_LSM6DS3_Arduino_Library/blob/master/src/SparkFunLSM6DS3.h
+https://github.com/sparkfun/SparkFun_LSM6DS3_Arduino_Library/blob/master/src/SparkFunLSM6DS3.cpp
+https://github.com/sparkfun/SparkFun_LSM6DS3_Arduino_Library/blob/master/examples/MinimalistExample/MinimalistExample.ino
+https://github.com/dbblackdiamond/SparkFun-LSM6DS3-Photon/blob/master/firmware/SparkFun-LSM6DS3-Photon.h
+http://pdf1.alldatasheet.net/datasheet-pdf/view/796179/STMICROELECTRONICS/LSM6DS3.html
+http://avrkwiat.nstrefa.pl/omnie/index.php?option=com_content&view=article&id=245&Itemid=273
+
+
