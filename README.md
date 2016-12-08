@@ -138,3 +138,4 @@ http://robotics.stackexchange.com/questions/8680/calculating-position-based-on-a
 
 http://www.starlino.com/imu_guide.html
 http://perso-etis.ensea.fr/~pierandr/cours/M1_SIC/AN3397.pdf
+http://aeroquad.com/showthread.php?7786-Simple-paper-about-an-algorithm-for-positioning-using-accelerometers
