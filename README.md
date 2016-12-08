@@ -137,3 +137,4 @@ https://github.com/sparkfun/SparkFun_LSM6DS3_Arduino_Library
 http://robotics.stackexchange.com/questions/8680/calculating-position-based-on-accelerometer-data
 
 http://www.starlino.com/imu_guide.html
+http://perso-etis.ensea.fr/~pierandr/cours/M1_SIC/AN3397.pdf
