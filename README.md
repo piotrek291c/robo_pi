@@ -165,3 +165,7 @@ http://uczymy.edu.pl/wp/blog/2015/07/13/transoptor-szczelinowy/
 https://botland.com.pl/transoptory-odbiciowe/52-czujnik-transoptor-odbiciowy-cny70.html
 
 http://fritzing.org/media/fritzing-repo/projects/a/arduino-cny70-light-proximity-sensor/images/CNY70%20light%20proximity%20sensor_bb.png
+
+https://github.com/cvra/odometry
+https://github.com/srv/stereo_slam
+http://automation.tkk.fi/attach/AS-0-2230/odometry.c.txt
