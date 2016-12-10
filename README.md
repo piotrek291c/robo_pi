@@ -169,3 +169,17 @@ http://fritzing.org/media/fritzing-repo/projects/a/arduino-cny70-light-proximity
 https://github.com/cvra/odometry
 https://github.com/srv/stereo_slam
 http://automation.tkk.fi/attach/AS-0-2230/odometry.c.txt
+
+http://rossum.sourceforge.net/papers/CalculationsForRobotics/CompendiumForKinematics.htm
+https://github.com/eschulma/robot-libraries-arduino
+https://arxiv.org/pdf/1509.02154.pdf
+http://www.geology.smu.edu/dpa-www/robots/doc/odometry.txt
+http://robotics.stackexchange.com/questions/1653/calculate-position-of-differential-drive-robot
+http://robotics.stackexchange.com/questions/8693/how-to-perform-odometry-on-an-arduino-for-a-differential-wheeled-robot?rq=1
+http://robotics.stackexchange.com/questions/8931/how-to-combine-odometry-information-with-time-shifted-information-from-imu?rq=1
+https://firstinmaryland.org/images/stories/documents2013/2013_Educ_Day/Sensors_Presentation.pdf
+http://kt.era.ee/supervision/Kallas2013.pdf
+http://automation.tkk.fi/attach/AS-0-2230/odometry.c.txt
+https://github.com/cvra/odometry
+
+
