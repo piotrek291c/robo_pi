@@ -183,3 +183,7 @@ http://automation.tkk.fi/attach/AS-0-2230/odometry.c.txt
 https://github.com/cvra/odometry
 
 
+
+https://app.assembla.com/spaces/robot-autonomiczny/documents/b6JUyuJDir4ii4eJe5cbCb/download/b6JUyuJDir4ii4eJe5cbCb
+http://lirec.iiar.pwr.edu.pl/~konarch/download/inne_roboty/zdarzenia_koncowe.pdf
+https://app.assembla.com/spaces/robot-autonomiczny/documents/b6JUyuJDir4ii4eJe5cbCb/download/b6JUyuJDir4ii4eJe5cbCb
