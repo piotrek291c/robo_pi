@@ -187,3 +187,9 @@ https://github.com/cvra/odometry
 https://app.assembla.com/spaces/robot-autonomiczny/documents/b6JUyuJDir4ii4eJe5cbCb/download/b6JUyuJDir4ii4eJe5cbCb
 http://lirec.iiar.pwr.edu.pl/~konarch/download/inne_roboty/zdarzenia_koncowe.pdf
 https://app.assembla.com/spaces/robot-autonomiczny/documents/b6JUyuJDir4ii4eJe5cbCb/download/b6JUyuJDir4ii4eJe5cbCb
+
+
+http://raspberrypi.stackexchange.com/questions/8851/setting-up-wifi-and-ethernet
+https://sites.google.com/site/raspberryflightgear/4-qt-and-raspberry
+https://www.raspberrypi.org/forums/viewtopic.php?t=33881
+http://www.aoakley.com/articles/2013-07-31-raspberry-pi-networking.php
