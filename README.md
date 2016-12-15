@@ -193,3 +193,7 @@ http://raspberrypi.stackexchange.com/questions/8851/setting-up-wifi-and-ethernet
 https://sites.google.com/site/raspberryflightgear/4-qt-and-raspberry
 https://www.raspberrypi.org/forums/viewtopic.php?t=33881
 http://www.aoakley.com/articles/2013-07-31-raspberry-pi-networking.php
+
+
+http://mdiy.pl/pcb-lutowanie-przelotek/
+http://www.elektroda.pl/rtvforum/topic100099.html
