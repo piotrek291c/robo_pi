@@ -74,8 +74,31 @@ DHT dht(DHTPIN, DHTTYPE); // definicja czujnika
 // -------------------------------------------------------------------------
 float predkosc_silnikow_PID4( double Setpoint , double Input);
 // -------------------------------------------------------------------------
-
+double fuzylogic_cel();
 // -------------------------------------------------------------------------
+
+float przebyta_droga=0;
+double x=0; // punkty na osi x w lokalnym układzie współrzędnych
+    double y=0; // punkty na osi x w lokalnym układzie współrzędnych
+    double xg=500; // pozycja x w globalnym układzie współrzędnych robota cel
+    double yg=0; // pozycja y w globalnym układzie współrzędnych robota cel
+    double poz_enkoder_left=0; // pozycja enkodera z silnika lewego
+    double poz_enkoder_right=0; // pozycja enkodera z silnika lewego
+    double DR=22.4;// double DR=227;   // średnica robota w mm
+    double MPP=0.0343; // double MPP=0.343;  // promień koła w cm  lub *0.1 cm  ponoć◙ kephera ma r=8mm a piasło 0.08
+    double kat_theta=0; //  orientacja robota w globalnym układzie współrzędnych
+    double cl=0;// pozycja enkodera lewego
+    double cr=0;// pozycja enkodera prawego
+    double cl_old=0;// stara pozycja enkodera lewego
+    double cr_old=0;// stara pozycja enkodera prawego
+    double z=0; // odległość od celu
+    //double i=0;
+    double psi=0; // kąt obrotu od celu jeśli 0 to na wprost celu
+    double pi=3.14;
+    double dl,dr; // różnica o jaką obróciło się około
+    double angle,radius,forward,lateral,dx,dy;
+
+
 
 // -------------------------------------------------------------------------
 
@@ -398,7 +421,7 @@ void silnik_set_speed_Forward(float speed)
 	speed_L=speed;
 	speed_R=speed;
 	pwm_silnik.setPWM(Kanal_PWM_Silnik_R,0,speed);
-	    speed = speed -(s*20.9); 
+	  //  speed = speed -(s*20.9); 
 	pwm_silnik.setPWM(Kanal_PWM_Silnik_L,0,speed);
 
 }
@@ -616,6 +639,141 @@ void go_to_encoder_pos(int pos)
 }
 
 // -------------------------------------------------------------------------
+
+
+// -------------------------------------------------------------------------
+void go_to_encoder_droga(float pos)
+{
+	
+	float e_L=encoderPos_L/27.9883382;
+	float e_R=encoderPos_R/27.9883382;
+	float e_L_new=0;
+	float e_R_new=0;
+	float speed = 3;
+	//int s=speed;
+	 
+	clockwise_L();
+	clockwise_R();
+	//counter_clockwise_L();
+	//counter_clockwise_R();
+	speed = speed * 409;
+    if (speed > 4095)
+        speed = 4095;
+
+	pwm_silnik.setPWM(Kanal_PWM_Silnik_R,0,speed);
+   // speed = speed -370;//(s*25.9); 
+    pwm_silnik.setPWM(Kanal_PWM_Silnik_L,0,speed); 
+
+	/*
+		while(e_R_new>=-pos or e_L_new <=pos)
+	{	
+	e_L_new=encoderPos_L-e_L;
+	e_R_new=encoderPos_R-e_R;
+	if(e_R_new<=-pos)
+		pwm_silnik.setPWM(Kanal_PWM_Silnik_R,0,0); 
+	if(e_L_new >=pos)
+		pwm_silnik.setPWM(Kanal_PWM_Silnik_L,0,0);
+	}
+	*/
+	
+	while(e_L_new>=-pos or e_R_new<=pos)
+	{	
+	e_L_new=encoderPos_L/27.9883382-e_L;
+	e_R_new=encoderPos_R/27.9883382-e_R;
+	if(e_L_new<=-pos)
+		pwm_silnik.setPWM(Kanal_PWM_Silnik_L,0,0); 
+	if(e_R_new>=pos)
+		pwm_silnik.setPWM(Kanal_PWM_Silnik_R,0,0);
+	}
+
+	pwm_silnik.setPWM(Kanal_PWM_Silnik_L,0,0); 
+	pwm_silnik.setPWM(Kanal_PWM_Silnik_R,0,0);
+}
+
+// -------------------------------------------------------------------------
+
+// -------------------------------------------------------------------------
+void skret_w_lewo(float stopnie)
+{
+	
+	//float e_L=encoderPos_L;
+	//float e_R=encoderPos_R;
+	//float e_L_new=0;
+	//float e_R_new=0;
+	float speed = 1;
+	//int s=speed;
+	 
+	counter_clockwise_L();
+	clockwise_R();
+	//counter_clockwise_L();
+	//counter_clockwise_R();
+	speed = speed * 409;
+    if (speed > 4095)
+        speed = 4095;
+
+	pwm_silnik.setPWM(Kanal_PWM_Silnik_R,0,speed);
+   // speed = speed -370;//(s*25.9); 
+    pwm_silnik.setPWM(Kanal_PWM_Silnik_L,0,speed); 
+
+	double obrot=fuzylogic_cel();
+	
+	while(obrot<=stopnie)
+	{	
+	//if(obrot>=stopnie)
+	//	{
+	//	pwm_silnik.setPWM(Kanal_PWM_Silnik_L,0,0); 
+	//	pwm_silnik.setPWM(Kanal_PWM_Silnik_R,0,0);
+	//	}
+	obrot=fuzylogic_cel();	
+	}
+
+	pwm_silnik.setPWM(Kanal_PWM_Silnik_L,0,0); 
+	pwm_silnik.setPWM(Kanal_PWM_Silnik_R,0,0);
+}
+
+// -------------------------------------------------------------------------
+
+// -------------------------------------------------------------------------
+void skret_w_prawo(float stopnie)
+{
+	
+	//float e_L=encoderPos_L;
+	//float e_R=encoderPos_R;
+	//float e_L_new=0;
+	//float e_R_new=0;
+	float speed = 1;
+	//int s=speed;
+	 
+	clockwise_L();
+	counter_clockwise_R();
+	//counter_clockwise_L();
+	//counter_clockwise_R();
+	speed = speed * 409;
+    if (speed > 4095)
+        speed = 4095;
+
+	pwm_silnik.setPWM(Kanal_PWM_Silnik_R,0,speed);
+   // speed = speed -370;//(s*25.9); 
+    pwm_silnik.setPWM(Kanal_PWM_Silnik_L,0,speed); 
+
+	double obrot=fuzylogic_cel();
+	
+	while(obrot>=-stopnie)
+	{	
+	//if(obrot>=stopnie)
+	//	{
+	//	pwm_silnik.setPWM(Kanal_PWM_Silnik_L,0,0); 
+	//	pwm_silnik.setPWM(Kanal_PWM_Silnik_R,0,0);
+	//	}
+	obrot=fuzylogic_cel();	
+	}
+
+	pwm_silnik.setPWM(Kanal_PWM_Silnik_L,0,0); 
+	pwm_silnik.setPWM(Kanal_PWM_Silnik_R,0,0);
+}
+
+// -------------------------------------------------------------------------
+
 // -------------------------------------------------------------------------
 
 float regulator1(float w_zad, float  wy_o)
@@ -865,6 +1023,36 @@ float predkosc_silnikow_fast()
 
 
 // -------------------------------------------------------------------------
+
+
+// -------------------------------------------------------------------------
+float droga_silnikow_fast()
+{
+	float droga=0;
+	float predkosc_liniowa=0;
+	//float promien=0.035 ; // w metrach [m]
+	float promien=3.43 ; // w metrach [cm]
+	float Vo1, Vo2;
+	
+	// 480 impulsów to jeden pełny obrót 
+	Vo1=encoderPos_L;
+	//delayMicroseconds(10000); // opóżnienie 10 milisekund
+	delay(100); // opóżnienie 0.1 sekunda
+	//sleep(60);
+	Vo2=encoderPos_L;
+	//cout << " encoderPos_L  "<< Vo1 << "encoderPos_L " << Vo2 <<" \n" << endl;
+	float predkosc_obrotowa=(abs(Vo2-Vo1)/960);  // predkość obrotów na sekunde [obr/s]
+	//float predkosc_obrotowa=(abs(Vo2-Vo1)/560)*60;  // predkość obrotów na sekunde [obr/min]
+	//cout << "Predkosc obrotowa" << predkosc_obrotowa  << " obr/s " << endl;
+	
+	//predkosc_liniowa = predkosc_obrotowa /( 3.14 * 2 * 60 * promien); // predkosc dla [obr/min]
+	predkosc_liniowa = (predkosc_obrotowa * (3.14 * 2 * promien)/10); // predkosc dla [m/s]
+	//predkosc_liniowa = (predkosc_obrotowa * (3.14 * 2 * promien)*10); // predkosc dla [cm/s]
+	droga=predkosc_liniowa*0.1;
+	return droga;
+}
+
+
 // -------------------------------------------------------------------------
 float predkosc_silnikow_enocder_tick()
 {
@@ -1518,6 +1706,109 @@ mcp3008Spi a2d("/dev/spidev0.0", SPI_MODE_0, 1000000, 8);
 
 
 
+
+
+
+
+// -------------------------------------------------------------------------
+double fuzylogic_cel()
+{
+
+   if (z>=2 or z==0)   // jeśli odległość mniejsza niż 60 to zatrzymaj robota
+    {
+
+
+   // kSetEncoders(ref,0,0);
+  //  while(1)
+  //  {
+        //poz_enkoder_left=10;  // odczytanie pozycji enkodera lewego
+        //poz_enkoder_right=10;
+        cl=-encoderPos_L/1; // ustawienie pozycja enkodera lewego
+        cr=encoderPos_R/1;
+        if ((cl_old != cl) | (cr_old != cr))  // jeśli został wykoanny ruch
+        {
+                dl = cl - cl_old;
+                dr = cr - cr_old;
+                cl_old = cl;
+                cr_old = cr;
+
+                if (dl != dr) // jeśli koła obróćiły się o różną odległość
+                {
+                          angle = (dr - dl)/DR*MPP; // kąt obrotu robota
+                          radius = (DR/2)*(dl + dr)/(dr - dl); // odległość promienia skrętu R (ICC) od śrdoka robota
+                          forward = radius*sin(angle); // jazda na przód ale w tym wypadku po łuku
+                          lateral = radius*(1.0 - cos(angle)); // jazda w bok
+                }
+                else
+                {
+
+                          angle = 0.0; // jeżeli obroty kół były takie same to kąt 0
+                          forward = dl*MPP; // jazda na przód
+                          lateral = 0.0; // jazda w bok
+                }
+
+                        dx = cos(kat_theta);
+                        dy = sin(kat_theta);
+                        x = x + forward*dx - lateral*dy; //  obliczanie pozycji x
+                        y = y + forward*dy + lateral*dx; //  obliczanie pozycji y
+                        kat_theta =(kat_theta+ angle);   // zmiana pozycji kąta
+
+           }
+                            if (kat_theta > 2*pi)  // jeżeli kąt większy niż 2pi to odejmnij 2pi
+                            {
+                             kat_theta =kat_theta - 2*pi;
+                            }
+
+
+                        if (kat_theta < -2*pi)
+                        {
+                         kat_theta = kat_theta+2*pi; // jeżeli kąt większy niż 2pi to dodaj 2pi
+                        }
+
+                    psi=kat_theta-(atan2((yg-y),(xg-x))); // oblicz obrót od celu
+                    z=sqrt(pow((xg-x),2)+pow((yg-y),2)); // oblicz odległość od celu
+                    printf("L: %d   R: %d    \n", -encoderPos_L, encoderPos_R);
+                    printf("x: %lf   y: %lf  xg: %lf   yg: %lf  \n", x, y, xg,yg);
+                    printf("psi: %lf   z: %lf  kat_theta: %lf\n", psi*180/3.14 , z, kat_theta*180/3.14);
+                    if (z<2)   // jeśli odległość mniejsza niż 60 to zatrzymaj robota
+
+                    {
+                   // ksetspeed(ref,0,0);
+                   // kSetEncoders(ref,0,0);
+                   silnik_set_speed_Forward(0);
+                    //    lewy_silnik= QString("%1").arg(0);
+                    //    prawy_silnik= QString("%1").arg(0);
+                    printf("Udalo sie dojechac \n");
+                    printf("L: %d   R: %d    \n", -encoderPos_L, encoderPos_R);
+                    printf("x: %lf   y: %lf  xg: %lf   yg: %lf  \n", x, y, xg,yg);
+                    printf("psi: %lf   z: %lf  kat_theta: %lf\n", psi*180/3.14 , z, kat_theta*180/3.14);
+              
+                        encoderPos_L=0;
+                        encoderPos_R=0;
+                //    break;
+                    }
+
+		}
+ return kat_theta*180/3.14;
+}
+// -------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // -------------------------------------------------------------------------
 void setup()
 {
@@ -1560,7 +1851,7 @@ int main()
 
 
    
-   //int i=0;
+   int i=0;
  while ( 1 ) 
 	{
     // magnetometr();
@@ -1582,19 +1873,19 @@ int main()
    //cout << "Predkosc      " << predkosc_silnikow() << " m/s " << endl;
 //temperatura_wilgotnosc();
   
-  spi_napiecie(0);
-  
+ // spi_napiecie(0);
+ // 
   
 
-  odczyt_czujnikow_CNY70(1);
+ // odczyt_czujnikow_CNY70(1);
   
-  delay(1000);
-  
-  
+ // delay(1);
   
   
-  
-  
+  fuzylogic_cel();
+  if(i==0)
+ go_to_encoder_pos(940); // skret_w_lewo( 90);//go_to_encoder_droga(400); 
+  i++;
 	}
 
         
