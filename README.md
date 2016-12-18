@@ -197,3 +197,5 @@ http://www.aoakley.com/articles/2013-07-31-raspberry-pi-networking.php
 
 http://mdiy.pl/pcb-lutowanie-przelotek/
 http://www.elektroda.pl/rtvforum/topic100099.html
+
+http://rab.ict.pwr.wroc.pl/~arent/rr/mpr/czujniki0.html
