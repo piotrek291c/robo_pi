@@ -199,3 +199,5 @@ http://mdiy.pl/pcb-lutowanie-przelotek/
 http://www.elektroda.pl/rtvforum/topic100099.html
 
 http://rab.ict.pwr.wroc.pl/~arent/rr/mpr/czujniki0.html
+
+http://howtomechatronics.com/projects/arduino-radar-project/
