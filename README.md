@@ -205,3 +205,9 @@ http://howtomechatronics.com/projects/arduino-radar-project/
 
 
 https://www.youtube.com/watch?v=I5nAynPdNJY
+
+
+http://samselectronicsprojects.blogspot.com/2014/07/getting-roll-pitch-and-yaw-from-mpu-6050.html
+http://www.jarzebski.pl/arduino/rozwiazania-i-algorytmy/odczyty-pitch-roll-oraz-filtr-kalmana.html
+https://forum.arduino.cc/index.php?topic=407756.0
+http://perso-etis.ensea.fr/%7Epierandr/cours/M1_SIC/AN3397.pdf
