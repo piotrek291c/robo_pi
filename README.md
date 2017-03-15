@@ -211,3 +211,5 @@ http://samselectronicsprojects.blogspot.com/2014/07/getting-roll-pitch-and-yaw-f
 http://www.jarzebski.pl/arduino/rozwiazania-i-algorytmy/odczyty-pitch-roll-oraz-filtr-kalmana.html
 https://forum.arduino.cc/index.php?topic=407756.0
 http://perso-etis.ensea.fr/%7Epierandr/cours/M1_SIC/AN3397.pdf
+
+https://rasspberrypi.wordpress.com/2012/09/09/wifi-tools-for-raspberry-pi/
