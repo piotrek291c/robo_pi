@@ -213,3 +213,6 @@ https://forum.arduino.cc/index.php?topic=407756.0
 http://perso-etis.ensea.fr/%7Epierandr/cours/M1_SIC/AN3397.pdf
 
 https://rasspberrypi.wordpress.com/2012/09/09/wifi-tools-for-raspberry-pi/
+
+
+http://starter-kit.nettigo.pl/2012/02/akcelerometry-zyroskopy-i-kompasy-czyli-badanie-polozenia-z-arduino-cz-1/
