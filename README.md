@@ -219,3 +219,6 @@ http://starter-kit.nettigo.pl/2012/02/akcelerometry-zyroskopy-i-kompasy-czyli-ba
 
 
 https://pimylifeup.com/raspberry-pi-webcam-server/
+
+
+https://www.element14.com/community/community/raspberry-pi/raspberrypi_projects/blog/2016/04/25/noir-v2-video-streaming-baby-monitor
