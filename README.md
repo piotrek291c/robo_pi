@@ -222,3 +222,6 @@ https://pimylifeup.com/raspberry-pi-webcam-server/
 
 
 https://www.element14.com/community/community/raspberry-pi/raspberrypi_projects/blog/2016/04/25/noir-v2-video-streaming-baby-monitor
+
+
+https://blog.miguelgrinberg.com/post/stream-video-from-the-raspberry-pi-camera-to-web-browsers-even-on-ios-and-android
