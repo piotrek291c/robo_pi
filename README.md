@@ -216,3 +216,6 @@ https://rasspberrypi.wordpress.com/2012/09/09/wifi-tools-for-raspberry-pi/
 
 
 http://starter-kit.nettigo.pl/2012/02/akcelerometry-zyroskopy-i-kompasy-czyli-badanie-polozenia-z-arduino-cz-1/
+
+
+https://pimylifeup.com/raspberry-pi-webcam-server/
