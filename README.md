@@ -225,3 +225,7 @@ https://www.element14.com/community/community/raspberry-pi/raspberrypi_projects/
 
 
 https://blog.miguelgrinberg.com/post/stream-video-from-the-raspberry-pi-camera-to-web-browsers-even-on-ios-and-android
+
+
+
+https://programmaticponderings.com/2013/01/01/remote-motion-activated-web-based-video-surveillance-with-raspberry-pi/
