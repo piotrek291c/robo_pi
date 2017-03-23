@@ -231,3 +231,7 @@ https://blog.miguelgrinberg.com/post/stream-video-from-the-raspberry-pi-camera-t
 https://programmaticponderings.com/2013/01/01/remote-motion-activated-web-based-video-surveillance-with-raspberry-pi/
 
 https://pimylifeup.com/raspberry-pi-security-camera/
+
+
+
+https://www.element14.com/community/community/raspberry-pi/raspberrypi_projects/blog/2016/04/25/noir-v2-video-streaming-baby-monitor
