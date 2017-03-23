@@ -229,3 +229,5 @@ https://blog.miguelgrinberg.com/post/stream-video-from-the-raspberry-pi-camera-t
 
 
 https://programmaticponderings.com/2013/01/01/remote-motion-activated-web-based-video-surveillance-with-raspberry-pi/
+
+https://pimylifeup.com/raspberry-pi-security-camera/
