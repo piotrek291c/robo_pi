@@ -237,3 +237,5 @@ https://pimylifeup.com/raspberry-pi-security-camera/
 https://www.element14.com/community/community/raspberry-pi/raspberrypi_projects/blog/2016/04/25/noir-v2-video-streaming-baby-monitor
 
 http://www.raspberry-pi-geek.com/Archive/2016/15/Using-the-RPi-Cam-Web-Interface
+
+https://neverbenever.wordpress.com/2015/02/11/how-to-autostart-a-program-in-raspberry-pi-or-linux/
