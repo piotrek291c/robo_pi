@@ -240,4 +240,6 @@ http://www.raspberry-pi-geek.com/Archive/2016/15/Using-the-RPi-Cam-Web-Interface
 
 https://neverbenever.wordpress.com/2015/02/11/how-to-autostart-a-program-in-raspberry-pi-or-linux/
 
+http://elinux.org/RPi-Cam-Web-Interface
+
 http://raspberrypi.stackexchange.com/questions/28199/raspberry-pi-starting-programs-automatically-on-startup
