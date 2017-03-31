@@ -243,3 +243,5 @@ https://neverbenever.wordpress.com/2015/02/11/how-to-autostart-a-program-in-rasp
 http://elinux.org/RPi-Cam-Web-Interface
 
 http://raspberrypi.stackexchange.com/questions/28199/raspberry-pi-starting-programs-automatically-on-startup
+
+https://www.domoticz.com/forum/viewtopic.php?t=16852
